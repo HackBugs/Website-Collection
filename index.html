@@ -454,6 +454,18 @@
         </svg>
         Add Category
       </button>
+      <button onclick="exportData()" class="btn btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="1em" height="1em">
+          <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+        Export Data
+      </button>
+      <button onclick="importData()" class="btn btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="1em" height="1em">
+          <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm7.121-9.172a1 1 0 011.415 0l3 3a1 1 0 01-1.415 1.414L11 9.414V16a1 1 0 11-2 0V9.414l-1.121 1.121a1 1 0 01-1.415-1.414l3-3z" clip-rule="evenodd" />
+        </svg>
+        Import Data
+      </button>
     </div>
 
     <div id="categories" class="categories-grid"></div>
@@ -488,18 +500,11 @@
     let isLoggedIn = false;
     const ROOT_USER = 'root';
     const ROOT_PASS = 'admin';
-    
-    // GitHub configuration
-    const GITHUB_USERNAME = 'HackBugs';
-    const GITHUB_REPO = 'Website-Collection';
-    const GITHUB_BRANCH = 'main';
-    const GITHUB_FILE_PATH = 'Website_Data/data.json';
-    const GITHUB_TOKEN = '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'; // Add your GitHub token here
-    const IS_GITHUB_PAGES = window.location.host.includes('github.io');
+    const GITHUB_DATA_URL = 'https://raw.githubusercontent.com/HackBugs/Website-Collection/main/Website_Data/data.json';
 
-    // Load saved data
+    // Load initial data
     let data = [];
-    
+
     // DOM Elements
     const authScreen = document.getElementById('auth-screen');
     const loginBtn = document.getElementById('login-btn');
@@ -528,113 +533,32 @@
       // Show loading state
       categoriesContainer.innerHTML = '<div class="loader"></div>';
       
-      // Load data from GitHub
+      // Load data - try GitHub first, then localStorage
       try {
-        data = await loadDataFromGitHub();
-        render();
-      } catch (error) {
-        console.error('Failed to load data from GitHub:', error);
-        // Fallback to local storage if GitHub fails
-        const localData = localStorage.getItem("websiteData");
-        data = localData ? JSON.parse(localData) : [];
-        render();
-        alert('Failed to load data from GitHub. Using local data instead.');
-      }
-    }
-
-    // GitHub API functions
-    async function loadDataFromGitHub() {
-      if (IS_GITHUB_PAGES) {
-        // When deployed on GitHub Pages, load directly from the repo
-        const response = await fetch('/Website_Data/data.json');
-        if (!response.ok) {
-          throw new Error('Failed to load data');
-        }
-        return await response.json();
-      } else {
-        // During development, use the GitHub API
-        if (!GITHUB_TOKEN) {
-          throw new Error('GitHub token not configured');
-        }
+        // Try to load from GitHub
+        const response = await fetch(GITHUB_DATA_URL);
+        if (!response.ok) throw new Error('Failed to fetch data');
         
-        const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}?ref=${GITHUB_BRANCH}`;
+        const githubData = await response.json();
+        if (!Array.isArray(githubData)) throw new Error('Invalid data format');
         
-        const response = await fetch(url, {
-          headers: {
-            'Authorization': `token ${GITHUB_TOKEN}`,
-            'Accept': 'application/vnd.github.v3+json'
-          }
-        });
-        
-        if (!response.ok) {
-          throw new Error(`GitHub API error: ${response.status}`);
-        }
-        
-        const fileData = await response.json();
-        const content = atob(fileData.content); // Decode base64 content
-        return JSON.parse(content);
-      }
-    }
-    
-    async function saveDataToGitHub() {
-      if (IS_GITHUB_PAGES) {
-        // Can't save directly from GitHub Pages, use local storage
+        data = githubData;
         localStorage.setItem("websiteData", JSON.stringify(data));
-        return;
-      }
-      
-      if (!GITHUB_TOKEN) {
-        throw new Error('GitHub token not configured');
-      }
-      
-      // First, get the current file SHA to update it
-      const getUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}?ref=${GITHUB_BRANCH}`;
-      let sha = null;
-      
-      try {
-        const getResponse = await fetch(getUrl, {
-          headers: {
-            'Authorization': `token ${GITHUB_TOKEN}`,
-            'Accept': 'application/vnd.github.v3+json'
-          }
-        });
+      } catch (githubError) {
+        console.error('Error loading from GitHub:', githubError);
         
-        if (getResponse.ok) {
-          const fileData = await getResponse.json();
-          sha = fileData.sha;
+        // Fallback to localStorage
+        const localData = localStorage.getItem("websiteData");
+        if (localData) {
+          data = JSON.parse(localData);
+          console.log('Loaded data from localStorage');
+        } else {
+          data = [];
+          console.log('No data found, starting with empty collection');
         }
-      } catch (error) {
-        console.log('File may not exist yet, creating new file');
       }
       
-      // Prepare the update request
-      const updateUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`;
-      const content = btoa(JSON.stringify(data, null, 2)); // Encode to base64
-      const message = `Update website data ${new Date().toISOString()}`;
-      
-      const response = await fetch(updateUrl, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message,
-          content,
-          sha,
-          branch: GITHUB_BRANCH
-        })
-      });
-      
-      if (!response.ok) {
-        throw new Error(`Failed to save data to GitHub: ${response.status}`);
-      }
-      
-      // Also save to local storage as fallback
-      localStorage.setItem("websiteData", JSON.stringify(data));
-      
-      return response.json();
+      render();
     }
 
     // Dark Mode Toggle
@@ -643,16 +567,48 @@
       localStorage.setItem('darkMode', darkModeToggle.checked);
     }
 
-    // Save data
-    async function saveData() {
-      try {
-        await saveDataToGitHub();
-      } catch (error) {
-        console.error('Failed to save to GitHub:', error);
-        // Fallback to local storage
-        localStorage.setItem("websiteData", JSON.stringify(data));
-        alert('Failed to save to GitHub. Data saved locally instead.');
-      }
+    // Export/Import Functions
+    function exportData() {
+      const dataStr = JSON.stringify(data, null, 2);
+      const blob = new Blob([dataStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'webcrate-data.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importData() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json';
+      input.onchange = e => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = event => {
+          try {
+            const importedData = JSON.parse(event.target.result);
+            if (!Array.isArray(importedData)) throw new Error('Invalid format');
+            
+            if (confirm('Replace current data with imported data?')) {
+              data = importedData;
+              saveData();
+              render();
+              alert('Data imported successfully!');
+            }
+          } catch (err) {
+            alert('Error importing data: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+      };
+      input.click();
+    }
+
+    // Save data to localStorage
+    function saveData() {
+      localStorage.setItem("websiteData", JSON.stringify(data));
     }
 
     // Show/Hide Login
@@ -665,7 +621,7 @@
     }
 
     // Auth Functions
-    async function login() {
+    function login() {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
       
@@ -700,46 +656,46 @@
     }
 
     // Category Functions
-    async function addCategory() {
+    function addCategory() {
       const name = prompt("Enter Category Name:");
       if (name) {
         data.push({ name, websites: [] });
-        await saveData();
+        saveData();
         render();
       }
     }
 
-    async function editCategory(index) {
+    function editCategory(index) {
       const newName = prompt("Edit Category Name:", data[index].name);
       if (newName) {
         data[index].name = newName;
-        await saveData();
+        saveData();
         render();
       }
     }
 
-    async function removeCategory(index) {
+    function removeCategory(index) {
       if (confirm(`Delete "${data[index].name}" category and all its websites?`)) {
         data.splice(index, 1);
-        await saveData();
+        saveData();
         render();
       }
     }
 
     // Website Functions
-    async function addWebsite(index) {
+    function addWebsite(index) {
       const title = prompt("Enter Website Title:");
       const link = prompt("Enter Website URL:");
       
       if (title && link) {
         const formattedLink = link.startsWith('http') ? link : `https://${link}`;
         data[index].websites.push({ title, link: formattedLink });
-        await saveData();
+        saveData();
         render();
       }
     }
 
-    async function editWebsite(catIndex, webIndex) {
+    function editWebsite(catIndex, webIndex) {
       const website = data[catIndex].websites[webIndex];
       const newTitle = prompt("Edit Title:", website.title);
       const newLink = prompt("Edit Link:", website.link);
@@ -747,15 +703,15 @@
       if (newTitle && newLink) {
         const formattedLink = newLink.startsWith('http') ? newLink : `https://${newLink}`;
         data[catIndex].websites[webIndex] = { title: newTitle, link: formattedLink };
-        await saveData();
+        saveData();
         render();
       }
     }
 
-    async function removeWebsite(catIndex, webIndex) {
+    function removeWebsite(catIndex, webIndex) {
       if (confirm(`Delete "${data[catIndex].websites[webIndex].title}" website?`)) {
         data[catIndex].websites.splice(webIndex, 1);
-        await saveData();
+        saveData();
         render();
       }
     }
