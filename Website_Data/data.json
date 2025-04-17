@@ -366,5 +366,51 @@
         "link": "http://1337x.to/"
       }
     ]
+  },
+  {
+    "name": "💀 Hacking",
+    "websites": [
+      {
+        "title": "Hack The Box - Ethical Hacking Labs",
+        "link": "https://www.hackthebox.com/"
+      },
+      {
+        "title": "TryHackMe - Learn Cyber Security",
+        "link": "https://tryhackme.com/"
+      },
+      {
+        "title": "PentestGPT - AI for penetration testing",
+        "link": "https://pentestgpt.ai/"
+      },
+      {
+        "title": "Exploit Database - CVE & Exploits",
+        "link": "https://www.exploit-db.com/"
+      },
+      {
+        "title": "Cyber Security News & Tools",
+        "link": "https://www.bleepingcomputer.com/"
+      },
+      {
+        "title": "Red Team Tools List (GitHub)",
+        "link": "https://github.com/yeyintminthuhtut/Awesome-Red-Teaming"
+      },
+      {
+        "title": "PayloadsAllTheThings",
+        "link": "https://github.com/swisskyrepo/PayloadsAllTheThings"
+      },
+      {
+        "title": "Web Security Academy by PortSwigger",
+        "link": "https://portswigger.net/web-security"
+      }
+    ]
+  },
+  {
+    "name": "🧩 Chrome Extensions",
+    "websites": [
+      {
+        "title": "Material You NewTab",
+        "link": "https://chromewebstore.google.com/detail/material-you-newtab/glloabhodjfmeoccmdngmhkpmdlakfbn?hl=en"
+      }
+    ]
   }
 ]
