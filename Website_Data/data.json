@@ -2,7 +2,10 @@
   {
     "name": "🔍 Search Engines",
     "websites": [
-      
+      {
+        "title": "Search Engine Party",
+        "link": "https://searchengine.party/"
+      }
     ]
   },
   {
