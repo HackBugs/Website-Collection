@@ -403,5 +403,14 @@
         "link": "https://portswigger.net/web-security"
       }
     ]
+  },
+  {
+    "name": "🧩 Chrome Extensions",
+    "websites": [
+      {
+        "title": "Material You NewTab",
+        "link": "https://chromewebstore.google.com/detail/material-you-newtab/glloabhodjfmeoccmdngmhkpmdlakfbn?hl=en"
+      }
+    ]
   }
 ]
