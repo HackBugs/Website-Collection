@@ -405,12 +405,320 @@
     ]
   },
   {
-    "name": "🧩 Chrome Extensions",
-    "websites": [
-      {
-        "title": "Material You NewTab",
-        "link": "https://chromewebstore.google.com/detail/material-you-newtab/glloabhodjfmeoccmdngmhkpmdlakfbn?hl=en"
-      }
-    ]
-  }
+  "name": "🧩 Chrome Extensions",
+  "websites": [
+    {
+      "title": "Chrome Web Store",
+      "link": "https://chrome.google.com/webstore"
+    }
+  ],
+  "enabled_extensions": [
+    {
+      "title": "Apollo.io: Free B2B Phone Number & Email Finder",
+      "link": "https://chrome.google.com/webstore/detail/alhgpfoeiimagjlnfekdhkjlkiomcapa"
+    },
+    {
+      "title": "Jungle Scout",
+      "link": "https://chrome.google.com/webstore/detail/bckjlihkmgolmgkchbpiponapgjenaoa"
+    },
+    {
+      "title": "OneTab",
+      "link": "https://chrome.google.com/webstore/detail/chphlpgkkbolifaimnlloiipkdnihall"
+    },
+    {
+      "title": "LeadRocks for LinkedIn: Profiles Scanner",
+      "link": "https://chrome.google.com/webstore/detail/clhmnbpdboilpogpmojknkopklkfggpa"
+    },
+    {
+      "title": "BuiltWith Technology Profiler",
+      "link": "https://chrome.google.com/webstore/detail/dapjbgnjinbpoindlpdmhochffioedbn"
+    },
+    {
+      "title": "Email Finder by Snov.io",
+      "link": "https://chrome.google.com/webstore/detail/einnffiilpmgldkapbikhkeicohlaapj"
+    },
+    {
+      "title": "ChatGPT for Amazon with GPT4 Shulex Copilot",
+      "link": "https://chrome.google.com/webstore/detail/fchbhcjlkcdchcaklpkdofllfoimelgb"
+    },
+    {
+      "title": "FullEnrich — LinkedIn Phone & Email Finder",
+      "link": "https://chrome.google.com/webstore/detail/fklpnmgmbmbbclnkhamepifgoejghfhf"
+    },
+    {
+      "title": "Google Search 100 Results",
+      "link": "https://chrome.google.com/webstore/detail/gdcdklbikolacdinbbdakpkkapianaee"
+    },
+    {
+      "title": "Skrapp.io - Email Finder",
+      "link": "https://chrome.google.com/webstore/detail/geplbbbmdpmdodfmohpikfacgkfpkhec"
+    },
+    {
+      "title": "Maps Scraper & Leads Extractor - MapsLeads.net",
+      "link": "https://chrome.google.com/webstore/detail/ghokiciomljbacchbkfhmnlmflbponlf"
+    },
+    {
+      "title": "Material You NewTab",
+      "link": "https://chrome.google.com/webstore/detail/glloabhodjfmeoccmdngmhkpmdlakfbn"
+    },
+    {
+      "title": "Wappalyzer - Technology profiler",
+      "link": "https://chrome.google.com/webstore/detail/gppongmhjkpfnbhagpmjfkannfbllamg"
+    },
+    {
+      "title": "XPath Helper",
+      "link": "https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl"
+    },
+    {
+      "title": "Hunter - Email Finder Extension",
+      "link": "https://chrome.google.com/webstore/detail/hgmhmanijnjhaffoampdlllchpolkdnj"
+    },
+    {
+      "title": "Growman: IG Email Extractor",
+      "link": "https://chrome.google.com/webstore/detail/hndnabgpcmhdmaejoapophbidipmgnpb"
+    },
+    {
+      "title": "Magical: AI Agent for Autofill Automation",
+      "link": "https://chrome.google.com/webstore/detail/iibninhmiggehlcdolcilmhacighjamp"
+    },
+    {
+      "title": "WordWeb Dictionary Lookup",
+      "link": "https://chrome.google.com/webstore/detail/ilikenhndcpmliapkmmhoimckaokmihm"
+    },
+    {
+      "title": "Email Finder by ContactOut – Email Lookup Tool",
+      "link": "https://chrome.google.com/webstore/detail/jjdemeiffadmmjhkbbpglgnlgeafomjo"
+    },
+    {
+      "title": "Web Scraper - Free Web Scraping",
+      "link": "https://chrome.google.com/webstore/detail/jnhgnonknehpejjnehehllkliplmbmhn"
+    },
+    {
+      "title": "Viewstats - YouTube video & channel analytics",
+      "link": "https://chrome.google.com/webstore/detail/licaccaeplhkahfkoighjblahbnafadl"
+    },
+    {
+      "title": "IDM Integration Module",
+      "link": "https://chrome.google.com/webstore/detail/ngpampappnmepgilojfohadhhmbhlaek"
+    },
+    {
+      "title": "Glimpse – Google Trends Supercharged",
+      "link": "https://chrome.google.com/webstore/detail/ocmojhiloccgbpjnkeiooioedaklapap"
+    },
+    {
+      "title": "Instant Data Scraper",
+      "link": "https://chrome.google.com/webstore/detail/ofaokhiedipichpaobibbnahnkdoiiah"
+    },
+    {
+      "title": "RocketReach Chrome Extension",
+      "link": "https://chrome.google.com/webstore/detail/oiecklaabeielolbliiddlbokpfnmhba"
+    },
+    {
+      "title": "LingQ Importer",
+      "link": "https://chrome.google.com/webstore/detail/pdomdmifpbdkkmiepgebeabbbgkdbdof"
+    },
+    {
+      "title": "Wiza - Phone Number & Email Finder",
+      "link": "https://chrome.google.com/webstore/detail/pjmlkdacmaejhkdcflncbpcpidkggoio"
+    }
+  ],
+  "disabled_extensions": [
+    {
+      "title": "Google Translate",
+      "link": "https://chrome.google.com/webstore/detail/aapbdbdomjkkjkaonfhkkikfgjllcleb"
+    },
+    {
+      "title": "Save All Resources",
+      "link": "https://chrome.google.com/webstore/detail/abpdnfjocnmdomablahdcfnoggeeiedb"
+    },
+    {
+      "title": "Simple Allow Copy",
+      "link": "https://chrome.google.com/webstore/detail/aefehdhdciieocakfobpaaolhipkcpgc"
+    },
+    {
+      "title": "eRail.in",
+      "link": "https://chrome.google.com/webstore/detail/aopfgjfeiimeioiajeknfidlljpoebgc"
+    },
+    {
+      "title": "Web Developer",
+      "link": "https://chrome.google.com/webstore/detail/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+    },
+    {
+      "title": "Edge Translate",
+      "link": "https://chrome.google.com/webstore/detail/bfdogplmndidlpjfhoijckpakkdjkkil"
+    },
+    {
+      "title": "Pop up blocker for Chrome™ - Poper Blocker",
+      "link": "https://chrome.google.com/webstore/detail/bkkbcggnhapdmkeljlodobbkopceiche"
+    },
+    {
+      "title": "Grammarly: AI Writing and Grammar Checker App",
+      "link": "https://chrome.google.com/webstore/detail/cnlefmmeadmemmdciolhbnfeacpdfbkd"
+    },
+    {
+      "title": "Tampermonkey",
+      "link": "https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+    },
+    {
+      "title": "Search Highlighter",
+      "link": "https://chrome.google.com/webstore/detail/ebpfppbcmjombpnmbobjabipanndeijg"
+    },
+    {
+      "title": "Temp Business Email Address",
+      "link": "https://chrome.google.com/webstore/detail/ednjmeomfcmonkgaogcgmfeelgegkpma"
+    },
+    {
+      "title": "Video Downloader Professional",
+      "link": "https://chrome.google.com/webstore/detail/elicpjhcidhpjomhibiffojpinpmmpil"
+    },
+    {
+      "title": "Smuuvr",
+      "link": "https://chrome.google.com/webstore/detail/emfncmdgioneiofbidgfafcekldnfbld"
+    },
+    {
+      "title": "Save to Google Drive",
+      "link": "https://chrome.google.com/webstore/detail/epniebpfenjojmafimadmknblcldlkof"
+    },
+    {
+      "title": "GoFullPage - Full Page Screen Capture",
+      "link": "https://chrome.google.com/webstore/detail/fdpohaocaechififmbbbbbknoalclacl"
+    },
+    {
+      "title": "Notepad",
+      "link": "https://chrome.google.com/webstore/detail/ffbhefmlcoihbjcmibbfkocmnaiacinp"
+    },
+    {
+      "title": "Website cloner - webpage downloader",
+      "link": "https://chrome.google.com/webstore/detail/ffjnfifmelbmglnajefiipdeejghkkjg"
+    },
+    {
+      "title": "Indian Railways @etrain.info",
+      "link": "https://chrome.google.com/webstore/detail/fjjlkgnbokonfaiffccmofmfopdlfmmf"
+    },
+    {
+      "title": "Chromegle - Omegle IP & Client",
+      "link": "https://chrome.google.com/webstore/detail/gcbbaikjfjmidabapdnebofcmconhdbn"
+    },
+    {
+      "title": "Google Docs Offline",
+      "link": "https://chrome.google.com/webstore/detail/ghbmnnjooekpmoecnnnilnnbdlolhkhi"
+    },
+    {
+      "title": "Scanlist: Email Finder & Sales Copy Generator",
+      "link": "https://chrome.google.com/webstore/detail/haiofogejpjmphinemcanjidbaibkebc"
+    },
+    {
+      "title": "Ahrefs SEO Toolbar: On-Page and SERP Tools",
+      "link": "https://chrome.google.com/webstore/detail/hgmoccdbjhknikckedaaebbpdeebhiei"
+    },
+    {
+      "title": "Tamper Chrome (extension)",
+      "link": "https://chrome.google.com/webstore/detail/hifhgpdkfodlpnlmlnmhchnkepplebkb"
+    },
+    {
+      "title": "Sketchpad for Browser",
+      "link": "https://chrome.google.com/webstore/detail/hkhoblmaekmiepdapgifgcahckeihbkb"
+    },
+    {
+      "title": "OneTab",
+      "link": "https://chrome.google.com/webstore/detail/hoimpamkkoehapgenciaoajfkfkpgfop"
+    },
+    {
+      "title": "ChromeLens",
+      "link": "https://chrome.google.com/webstore/detail/idikgljglpfilbhaboonnpnnincjhjkd"
+    },
+    {
+      "title": "QuillBot: AI Writing and Grammar Checker Tool",
+      "link": "https://chrome.google.com/webstore/detail/iidnbdjijdkbmajdffnidomddglmieko"
+    },
+    {
+      "title": "OneLogin for Google Chrome",
+      "link": "https://chrome.google.com/webstore/detail/ioalpmibngobedobkmbhgmadaphocjdn"
+    },
+    {
+      "title": "Stream Recorder - HLS & m3u8 Video Downloader",
+      "link": "https://chrome.google.com/webstore/detail/iogidnfllpdhagebkblkgbfijkbkjdmm"
+    },
+    {
+      "title": "Email Extractor",
+      "link": "https://chrome.google.com/webstore/detail/jdianbbpnakhcmfkcckaboohfgnngfcc"
+    },
+    {
+      "title": "AI Prompt Genius",
+      "link": "https://chrome.google.com/webstore/detail/jjdnakkfjnnbbckhifcfchagnpofjffo"
+    },
+    {
+      "title": "Salesforce",
+      "link": "https://chrome.google.com/webstore/detail/jjghhkepijgakdammjldcbnjehfkfmha"
+    },
+    {
+      "title": "Video Downloader Chrome",
+      "link": "https://chrome.google.com/webstore/detail/jlbmenngnppkommpmohppjpkglicldbd"
+    },
+    {
+      "title": "Speechify Text to Speech Voice Reader",
+      "link": "https://chrome.google.com/webstore/detail/ljflmlehinmoeknoonhibbjpldiijjmm"
+    },
+    {
+      "title": "Reader Mode",
+      "link": "https://chrome.google.com/webstore/detail/llimhhconnjiflfimocjggfjdlmlhblm"
+    },
+    {
+      "title": "Video DownloadHelper",
+      "link": "https://chrome.google.com/webstore/detail/lmjnegcaeklhafolokijcfjliaokphfk"
+    },
+    {
+      "title": "Prospeo - Email Finder",
+      "link": "https://chrome.google.com/webstore/detail/lodchmjigmbiibplfmagekadbpomglad"
+    },
+    {
+      "title": "WebChatGPT: ChatGPT with internet access",
+      "link": "https://chrome.google.com/webstore/detail/lpfemeioodjbpieminkklglpmhlngfcn"
+    },
+    {
+      "title": "Take Webpage Screenshots Entirely - FireShot",
+      "link": "https://chrome.google.com/webstore/detail/mcbpblocgmgfnpjjppndjkmgjaogfceg"
+    },
+    {
+      "title": "BLACKBOX.AI",
+      "link": "https://chrome.google.com/webstore/detail/mcgbeeipkmelnpldkobichboakdfaeon"
+    },
+    {
+      "title": "Google Input Tools",
+      "link": "https://chrome.google.com/webstore/detail/mclkkofklkfljcocdinagocijmpgbhab"
+    },
+    {
+      "title": "Copy for Chat GPT",
+      "link": "https://chrome.google.com/webstore/detail/mloblghgjiagjdffmgobhbgmplhongpm"
+    },
+    {
+      "title": "Displate Fullscreen Viewer",
+      "link": "https://chrome.google.com/webstore/detail/nchdoajnpindhpopdjhlapbdanbbfneo"
+    },
+    {
+      "title": "Keepa - Amazon Price Tracker",
+      "link": "https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo"
+    },
+    {
+      "title": "hide.me Proxy",
+      "link": "https://chrome.google.com/webstore/detail/ohjocgmpmlfahafbipehkhbaacoemojp"
+    },
+    {
+      "title": "AIPRM for ChatGPT",
+      "link": "https://chrome.google.com/webstore/detail/ojnbohmppadfgpejeebfnmnknjdlckgj"
+    },
+    {
+      "title": "Price History & Tracker, Spend Lens: Buyhatke",
+      "link": "https://chrome.google.com/webstore/detail/ojplmecpdpgccookcobabopnaifgidhf"
+    },
+    {
+      "title": "Transkriptor Transcribe Audio to Text",
+      "link": "https://chrome.google.com/webstore/detail/pbajmiiebklfjhkeahpgjdlgclelihjh"
+    },
+    {
+      "title": "Salesforce Lightning Inspector",
+      "link": "https://chrome.google.com/webstore/detail/pcpmcffcomlcjgpcheokdfcjipanjdpc"
+    }
+  ]
+ }
 ]
