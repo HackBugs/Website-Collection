@@ -12,6 +12,129 @@
     "name": "📱 Social Media",
     "websites": []
   },
+  // ... (other categories remain unchanged until Chrome Extensions) ...
+  {
+    "name": "🧩 Chrome Extensions",
+    "websites": [
+      {
+        "title": "Chrome Web Store",
+        "link": "https://chrome.google.com/webstore"
+      },
+      {
+        "title": "Apollo.io: Free B2B Phone Number & Email Finder",
+        "link": "https://chrome.google.com/webstore/detail/alhgpfoeiimagjlnfekdhkjlkiomcapa"
+      },
+      {
+        "title": "Jungle Scout",
+        "link": "https://chrome.google.com/webstore/detail/bckjlihkmgolmgkchbpiponapgjenaoa"
+      },
+      {
+        "title": "OneTab",
+        "link": "https://chrome.google.com/webstore/detail/chphlpgkkbolifaimnlloiipkdnihall"
+      },
+      {
+        "title": "LeadRocks for LinkedIn: Profiles Scanner",
+        "link": "https://chrome.google.com/webstore/detail/clhmnbpdboilpogpmojknkopklkfggpa"
+      },
+      {
+        "title": "BuiltWith Technology Profiler",
+        "link": "https://chrome.google.com/webstore/detail/dapjbgnjinbpoindlpdmhochffioedbn"
+      },
+      {
+        "title": "Email Finder by Snov.io",
+        "link": "https://chrome.google.com/webstore/detail/einnffiilpmgldkapbikhkeicohlaapj"
+      },
+      {
+        "title": "ChatGPT for Amazon with GPT4 Shulex Copilot",
+        "link": "https://chrome.google.com/webstore/detail/fchbhcjlkcdchcaklpkdofllfoimelgb"
+      },
+      {
+        "title": "FullEnrich — LinkedIn Phone & Email Finder",
+        "link": "https://chrome.google.com/webstore/detail/fklpnmgmbmbbclnkhamepifgoejghfhf"
+      },
+      {
+        "title": "Google Search 100 Results",
+        "link": "https://chrome.google.com/webstore/detail/gdcdklbikolacdinbbdakpkkapianaee"
+      },
+      {
+        "title": "Skrapp.io - Email Finder",
+        "link": "https://chrome.google.com/webstore/detail/geplbbbmdpmdodfmohpikfacgkfpkhec"
+      },
+      {
+        "title": "Maps Scraper & Leads Extractor - MapsLeads.net",
+        "link": "https://chrome.google.com/webstore/detail/ghokiciomljbacchbkfhmnlmflbponlf"
+      },
+      {
+        "title": "Material You NewTab",
+        "link": "https://chrome.google.com/webstore/detail/glloabhodjfmeoccmdngmhkpmdlakfbn"
+      },
+      {
+        "title": "Wappalyzer - Technology profiler",
+        "link": "https://chrome.google.com/webstore/detail/gppongmhjkpfnbhagpmjfkannfbllamg"
+      },
+      {
+        "title": "XPath Helper",
+        "link": "https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl"
+      },
+      {
+        "title": "Hunter - Email Finder Extension",
+        "link": "https://chrome.google.com/webstore/detail/hgmhmanijnjhaffoampdlllchpolkdnj"
+      },
+      {
+        "title": "Growman: IG Email Extractor",
+        "link": "https://chrome.google.com/webstore/detail/hndnabgpcmhdmaejoapophbidipmgnpb"
+      },
+      {
+        "title": "Magical: AI Agent for Autofill Automation",
+        "link": "https://chrome.google.com/webstore/detail/iibninhmiggehlcdolcilmhacighjamp"
+      },
+      {
+        "title": "WordWeb Dictionary Lookup",
+        "link": "https://chrome.google.com/webstore/detail/ilikenhndcpmliapkmmhoimckaokmihm"
+      },
+      {
+        "title": "Email Finder by ContactOut – Email Lookup Tool",
+        "link": "https://chrome.google.com/webstore/detail/jjdemeiffadmmjhkbbpglgnlgeafomjo"
+      },
+      {
+        "title": "Web Scraper - Free Web Scraping",
+        "link": "https://chrome.google.com/webstore/detail/jnhgnonknehpejjnehehllkliplmbmhn"
+      },
+      {
+        "title": "Viewstats - YouTube video & channel analytics",
+        "link": "https://chrome.google.com/webstore/detail/licaccaeplhkahfkoighjblahbnafadl"
+      },
+      {
+        "title": "IDM Integration Module",
+        "link": "https://chrome.google.com/webstore/detail/ngpampappnmepgilojfohadhhmbhlaek"
+      },
+      {
+        "title": "Glimpse – Google Trends Supercharged",
+        "link": "https://chrome.google.com/webstore/detail/ocmojhiloccgbpjnkeiooioedaklapap"
+      },
+      {
+        "title": "Instant Data Scraper",
+        "link": "https://chrome.google.com/webstore/detail/ofaokhiedipichpaobibbnahnkdoiiah"
+      },
+      {
+        "title": "RocketReach Chrome Extension",
+        "link": "https://chrome.google.com/webstore/detail/oiecklaabeielolbliiddlbokpfnmhba"
+      },
+      {
+        "title": "LingQ Importer",
+        "link": "https://chrome.google.com/webstore/detail/pdomdmifpbdkkmiepgebeabbbgkdbdof"
+      },
+      {
+        "title": "Wiza - Phone Number & Email Finder",
+        "link": "https://chrome.google.com/webstore/detail/pjmlkdacmaejhkdcflncbpcpidkggoio"
+      }
+    ]
+  },
+  // ... (remaining categories stay the same) ...
+  {
+    "name": "📱 Social Media",
+    "websites": []
+  },
   {
     "name": "💬 Messaging & Communication",
     "websites": []
@@ -411,6 +534,7 @@
         "title": "Material You NewTab",
         "link": "https://chromewebstore.google.com/detail/material-you-newtab/glloabhodjfmeoccmdngmhkpmdlakfbn?hl=en"
       }
+      
     ]
   }
 ]
