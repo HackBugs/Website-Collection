@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Website Collection</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .website {
+      margin: 5px 0;
+      padding: 10px;
+      background: #f1f5f9;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    button {
+      background-color: #3b82f6;
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button.remove {
+      background-color: #ef4444;
+      margin-left: 5px;
+    }
+
+    button.edit {
+      background-color: #f59e0b;
+      margin-left: 5px;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .website > div {
+      flex-grow: 1;
+    }
+
+    .category-buttons {
+      margin-top: 10px;
+    }
+
+    #login-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    input {
+      margin: 8px;
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    #logout-btn {
+      float: right;
+      margin-bottom: 20px;
+      background-color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+<div id="login-box">
+  <h2>🔐 Login to Manage Websites</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="container" style="display: none;" id="main-container">
+  <div class="header">
+    <h1>🌐 Website Collection</h1>
+    <div class="header-buttons" id="admin-controls">
+      <button onclick="addCategory()">+ Add New Category</button>
+    </div>
+    <button id="logout-btn" onclick="logout()">🚪 Logout</button>
+  </div>
+  <div id="categories"></div>
+</div>
+
+<script>
+let isLoggedIn = false;
+const ROOT_USER = 'root';
+const ROOT_PASS = 'admin';
+
+// Load saved data from localStorage
+let data = JSON.parse(localStorage.getItem("websiteData")) || [];
+
+function saveData() {
+  localStorage.setItem("websiteData", JSON.stringify(data));
+}
+
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  if (username === ROOT_USER && password === ROOT_PASS) {
+    isLoggedIn = true;
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("main-container").style.display = "block";
+    render();
+  } else {
+    alert("Invalid credentials!");
+  }
+}
+
+function logout() {
+  isLoggedIn = false;
+  location.reload();
+}
+
+function addCategory() {
+  const name = prompt("Enter Category Name:");
+  if (name) {
+    data.push({ name, websites: [] });
+    saveData();
+    render();
+  }
+}
+
+function addWebsite(index) {
+  const title = prompt("Enter Website Title:");
+  const link = prompt("Enter Website Link:");
+  if (title && link) {
+    data[index].websites.push({ title, link });
+    saveData();
+    render();
+  }
+}
+
+function removeCategory(index) {
+  if (confirm("Delete this category?")) {
+    data.splice(index, 1);
+    saveData();
+    render();
+  }
+}
+
+function editCategory(index) {
+  const newName = prompt("Edit Category Name:", data[index].name);
+  if (newName) {
+    data[index].name = newName;
+    saveData();
+    render();
+  }
+}
+
+function removeWebsite(catIndex, webIndex) {
+  data[catIndex].websites.splice(webIndex, 1);
+  saveData();
+  render();
+}
+
+function editWebsite(catIndex, webIndex) {
+  const newTitle = prompt("Edit Title:", data[catIndex].websites[webIndex].title);
+  const newLink = prompt("Edit Link:", data[catIndex].websites[webIndex].link);
+  if (newTitle && newLink) {
+    data[catIndex].websites[webIndex] = { title: newTitle, link: newLink };
+    saveData();
+    render();
+  }
+}
+
+function render() {
+  const container = document.getElementById("categories");
+  container.innerHTML = "";
+
+  data.forEach((cat, catIndex) => {
+    const categoryDiv = document.createElement("div");
+    categoryDiv.className = "category";
+
+    const categoryHeader = document.createElement("div");
+    categoryHeader.className = "category-header";
+
+    const title = document.createElement("div");
+    title.className = "category-title";
+    title.innerText = cat.name;
+
+    categoryHeader.appendChild(title);
+
+    if (isLoggedIn) {
+      const titleButtons = document.createElement("div");
+      
+      const editCategoryBtn = document.createElement("button");
+      editCategoryBtn.innerText = "✏️ Edit";
+      editCategoryBtn.className = "edit";
+      editCategoryBtn.onclick = () => editCategory(catIndex);
+
+      const removeCategoryBtn = document.createElement("button");
+      removeCategoryBtn.innerText = "❌ Remove";
+      removeCategoryBtn.className = "remove";
+      removeCategoryBtn.onclick = () => removeCategory(catIndex);
+
+      titleButtons.appendChild(editCategoryBtn);
+      titleButtons.appendChild(removeCategoryBtn);
+      categoryHeader.appendChild(titleButtons);
+    }
+
+    categoryDiv.appendChild(categoryHeader);
+
+    if (isLoggedIn) {
+      const websiteBtnWrapper = document.createElement("div");
+      websiteBtnWrapper.className = "category-buttons";
+
+      const addWebsiteBtn = document.createElement("button");
+      addWebsiteBtn.innerText = "+ Add Website";
+      addWebsiteBtn.onclick = () => addWebsite(catIndex);
+
+      websiteBtnWrapper.appendChild(addWebsiteBtn);
+      categoryDiv.appendChild(websiteBtnWrapper);
+    }
+
+    cat.websites.forEach((web, webIndex) => {
+      const websiteDiv = document.createElement("div");
+      websiteDiv.className = "website";
+
+      const websiteContent = document.createElement("div");
+      websiteContent.innerHTML = `🔗 <a href="${web.link}" target="_blank">${web.title}</a>`;
+
+      websiteDiv.appendChild(websiteContent);
+
+      if (isLoggedIn) {
+        const editBtn = document.createElement("button");
+        editBtn.innerText = "✏️ Edit";
+        editBtn.className = "edit";
+        editBtn.onclick = () => editWebsite(catIndex, webIndex);
+
+        const removeBtn = document.createElement("button");
+        removeBtn.innerText = "❌ Remove";
+        removeBtn.className = "remove";
+        removeBtn.onclick = () => removeWebsite(catIndex, webIndex);
+
+        websiteDiv.appendChild(editBtn);
+        websiteDiv.appendChild(removeBtn);
+      }
+
+      categoryDiv.appendChild(websiteDiv);
+    });
+
+    container.appendChild(categoryDiv);
+  });
+}
+
+// On initial load
+render();
+</script>
+
+</body>
+</html>
