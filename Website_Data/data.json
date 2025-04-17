@@ -1,9 +1,5 @@
 [
   {
-    "name": "💀 Hacking",
-    "websites": []
-  },
-  {
     "name": "🔍 Search Engines",
     "websites": [
       {
@@ -369,6 +365,10 @@
         "title": "1337x",
         "link": "http://1337x.to/"
       }
+  {
+    "name": "💀 Hacking",
+    "websites": []
+  },
     ]
   }
 ]
