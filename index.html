@@ -1,11 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Previous head content remains the same -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebCrate • Modern Website Collection</title>
   <style>
-    /* Previous styles remain the same */
-    
-    /* Add loading spinner */
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --success: #10b981;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --card-border: rgba(255, 255, 255, 0.3);
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark-mode {
+      --primary: #818cf8;
+      --primary-dark: #6366f1;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+      --bg: #0f172a;
+      --card-bg: rgba(15, 23, 42, 0.8);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: var(--transition);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header Styles */
+    .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .app-title {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--primary), #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .app-title svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Auth Styles */
+    .auth-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      z-index: 1000;
+    }
+
+    .auth-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .auth-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .auth-title svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--card-border);
+      border-radius: 0.5rem;
+      background: var(--card-bg);
+      color: var(--text);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: white;
+    }
+
+    .btn-danger:hover {
+      opacity: 0.9;
+    }
+
+    .btn-warning {
+      background: var(--warning);
+      color: white;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    .btn-icon {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    /* Category Styles */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .category-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .category-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .category-actions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    /* Website Styles */
+    .websites-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .website-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .website-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .website-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      text-decoration: none;
+      flex-grow: 1;
+    }
+
+    .website-link:hover .website-name {
+      color: var(--primary);
+    }
+
+    .website-favicon {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+
+    .website-name {
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .website-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    /* Toggle Switch */
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Loader Styles */
     .loader {
       border: 4px solid rgba(0, 0, 0, 0.1);
       border-radius: 50%;
@@ -15,15 +378,110 @@
       animation: spin 1s linear infinite;
       margin: 20px auto;
     }
-    
+
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+      
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Previous HTML remains the same until the script section -->
+  <!-- Main App -->
+  <div class="container">
+    <header class="app-header">
+      <h1 class="app-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        WebCrate
+      </h1>
+      <div class="header-actions">
+        <label class="toggle-switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider"></span>
+        </label>
+        <button id="login-btn" onclick="showLogin()" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="1em" height="1em">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+          </svg>
+          Login
+        </button>
+        <button id="logout-btn" onclick="logout()" class="btn btn-outline" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="1em" height="1em">
+            <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd" />
+          </svg>
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <div id="admin-controls" style="margin-bottom: 2rem; display: none;">
+      <button onclick="addCategory()" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" width="1em" height="1em">
+          <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+        </svg>
+        Add Category
+      </button>
+    </div>
+
+    <div id="categories" class="categories-grid"></div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div id="auth-screen" class="auth-container">
+    <div class="auth-card animate-in">
+      <button class="close-btn" onclick="hideLogin()">&times;</button>
+      <h1 class="auth-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+        </svg>
+        WebCrate Login
+      </h1>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="input-field" placeholder="Enter your username">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="input-field" placeholder="Enter your password">
+      </div>
+      <button onclick="login()" class="btn btn-primary" style="width: 100%;">
+        Sign In
+      </button>
+    </div>
+  </div>
 
   <script>
     // App State
@@ -36,8 +494,9 @@
     const GITHUB_REPO = 'Website-Collection';
     const GITHUB_BRANCH = 'main';
     const GITHUB_FILE_PATH = 'Website_Data/data.json';
-    const GITHUB_TOKEN = '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'; // You'll need to add your GitHub token here
-    
+    const GITHUB_TOKEN = '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'; // Add your GitHub token here
+    const IS_GITHUB_PAGES = window.location.host.includes('github.io');
+
     // Load saved data
     let data = [];
     
@@ -85,29 +544,45 @@
 
     // GitHub API functions
     async function loadDataFromGitHub() {
-      if (!GITHUB_TOKEN) {
-        throw new Error('GitHub token not configured');
-      }
-      
-      const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}?ref=${GITHUB_BRANCH}`;
-      
-      const response = await fetch(url, {
-        headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json'
+      if (IS_GITHUB_PAGES) {
+        // When deployed on GitHub Pages, load directly from the repo
+        const response = await fetch('/Website_Data/data.json');
+        if (!response.ok) {
+          throw new Error('Failed to load data');
         }
-      });
-      
-      if (!response.ok) {
-        throw new Error(`GitHub API error: ${response.status}`);
+        return await response.json();
+      } else {
+        // During development, use the GitHub API
+        if (!GITHUB_TOKEN) {
+          throw new Error('GitHub token not configured');
+        }
+        
+        const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}?ref=${GITHUB_BRANCH}`;
+        
+        const response = await fetch(url, {
+          headers: {
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status}`);
+        }
+        
+        const fileData = await response.json();
+        const content = atob(fileData.content); // Decode base64 content
+        return JSON.parse(content);
       }
-      
-      const fileData = await response.json();
-      const content = atob(fileData.content); // Decode base64 content
-      return JSON.parse(content);
     }
     
     async function saveDataToGitHub() {
+      if (IS_GITHUB_PAGES) {
+        // Can't save directly from GitHub Pages, use local storage
+        localStorage.setItem("websiteData", JSON.stringify(data));
+        return;
+      }
+      
       if (!GITHUB_TOKEN) {
         throw new Error('GitHub token not configured');
       }
@@ -162,9 +637,13 @@
       return response.json();
     }
 
-    // Previous functions remain the same until saveData()
-    
-    // Modified saveData function
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', darkModeToggle.checked);
+    }
+
+    // Save data
     async function saveData() {
       try {
         await saveDataToGitHub();
@@ -176,9 +655,51 @@
       }
     }
 
-    // Previous functions remain the same
-    
-    // Modify all functions that change data to use async/await
+    // Show/Hide Login
+    function showLogin() {
+      authScreen.style.display = "flex";
+    }
+
+    function hideLogin() {
+      authScreen.style.display = "none";
+    }
+
+    // Auth Functions
+    async function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      
+      if (username === ROOT_USER && password === ROOT_PASS) {
+        isLoggedIn = true;
+        localStorage.setItem('isLoggedIn', 'true');
+        hideLogin();
+        updateUI();
+        render();
+      } else {
+        alert("Invalid credentials! Try root/admin");
+      }
+    }
+
+    function logout() {
+      isLoggedIn = false;
+      localStorage.removeItem('isLoggedIn');
+      updateUI();
+      render();
+    }
+
+    function updateUI() {
+      if (isLoggedIn) {
+        loginBtn.style.display = "none";
+        logoutBtn.style.display = "flex";
+        adminControls.style.display = "block";
+      } else {
+        loginBtn.style.display = "flex";
+        logoutBtn.style.display = "none";
+        adminControls.style.display = "none";
+      }
+    }
+
+    // Category Functions
     async function addCategory() {
       const name = prompt("Enter Category Name:");
       if (name) {
@@ -205,6 +726,7 @@
       }
     }
 
+    // Website Functions
     async function addWebsite(index) {
       const title = prompt("Enter Website Title:");
       const link = prompt("Enter Website URL:");
@@ -236,6 +758,159 @@
         await saveData();
         render();
       }
+    }
+
+    // Favicon helper
+    function getFaviconUrl(url) {
+      try {
+        const domain = new URL(url).hostname;
+        return `https://www.google.com/s2/favicons?domain=${domain}`;
+      } catch {
+        return `https://www.google.com/s2/favicons?domain=google.com`;
+      }
+    }
+
+    // Render the UI
+    function render() {
+      const container = document.getElementById("categories");
+      container.innerHTML = "";
+
+      if (data.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 2rem;">
+            <h3 style="color: var(--text-light); margin-bottom: 1rem;">
+              No categories yet. Add your first category to get started!
+            </h3>
+            ${isLoggedIn ? `<button onclick="addCategory()" class="btn btn-primary">Create Category</button>` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      data.forEach((category, catIndex) => {
+        const categoryCard = document.createElement("div");
+        categoryCard.className = "category-card animate-in";
+        categoryCard.style.animationDelay = `${catIndex * 0.1}s`;
+
+        // Category Header
+        const categoryHeader = document.createElement("div");
+        categoryHeader.className = "category-header";
+
+        const categoryTitle = document.createElement("h2");
+        categoryTitle.className = "category-title";
+        categoryTitle.textContent = category.name;
+
+        categoryHeader.appendChild(categoryTitle);
+
+        // Admin Actions
+        if (isLoggedIn) {
+          const categoryActions = document.createElement("div");
+          categoryActions.className = "category-actions";
+
+          const addBtn = document.createElement("button");
+          addBtn.className = "btn btn-primary btn-sm";
+          addBtn.textContent = "Add Website";
+          addBtn.onclick = (e) => {
+            e.stopPropagation();
+            addWebsite(catIndex);
+          };
+
+          const editBtn = document.createElement("button");
+          editBtn.className = "btn btn-warning btn-icon";
+          editBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" /></svg>`;
+          editBtn.title = "Edit Category";
+          editBtn.onclick = (e) => {
+            e.stopPropagation();
+            editCategory(catIndex);
+          };
+
+          const deleteBtn = document.createElement("button");
+          deleteBtn.className = "btn btn-danger btn-icon";
+          deleteBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>`;
+          deleteBtn.title = "Delete Category";
+          deleteBtn.onclick = (e) => {
+            e.stopPropagation();
+            removeCategory(catIndex);
+          };
+
+          categoryActions.appendChild(addBtn);
+          categoryActions.appendChild(editBtn);
+          categoryActions.appendChild(deleteBtn);
+          categoryHeader.appendChild(categoryActions);
+        }
+
+        categoryCard.appendChild(categoryHeader);
+
+        // Websites List
+        const websitesList = document.createElement("div");
+        websitesList.className = "websites-list";
+
+        if (category.websites.length === 0) {
+          websitesList.innerHTML = `
+            <div style="text-align: center; padding: 1rem; color: var(--text-light);">
+              No websites in this category yet.
+              ${isLoggedIn ? '<div style="margin-top: 0.5rem;"><button onclick="addWebsite(${catIndex})" class="btn btn-primary btn-sm">Add Website</button></div>' : ''}
+            </div>
+          `;
+        } else {
+          category.websites.forEach((website, webIndex) => {
+            const websiteItem = document.createElement("div");
+            websiteItem.className = "website-item";
+
+            const websiteLink = document.createElement("a");
+            websiteLink.className = "website-link";
+            websiteLink.href = website.link;
+            websiteLink.target = "_blank";
+            websiteLink.rel = "noopener noreferrer";
+
+            const favicon = document.createElement("img");
+            favicon.className = "website-favicon";
+            favicon.src = getFaviconUrl(website.link);
+            favicon.alt = "";
+
+            const websiteName = document.createElement("span");
+            websiteName.className = "website-name";
+            websiteName.textContent = website.title;
+
+            websiteLink.appendChild(favicon);
+            websiteLink.appendChild(websiteName);
+            websiteItem.appendChild(websiteLink);
+
+            // Admin Actions
+            if (isLoggedIn) {
+              const websiteActions = document.createElement("div");
+              websiteActions.className = "website-actions";
+
+              const editBtn = document.createElement("button");
+              editBtn.className = "btn btn-warning btn-icon";
+              editBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" /></svg>`;
+              editBtn.title = "Edit Website";
+              editBtn.onclick = (e) => {
+                e.preventDefault();
+                editWebsite(catIndex, webIndex);
+              };
+
+              const deleteBtn = document.createElement("button");
+              deleteBtn.className = "btn btn-danger btn-icon";
+              deleteBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>`;
+              deleteBtn.title = "Delete Website";
+              deleteBtn.onclick = (e) => {
+                e.preventDefault();
+                removeWebsite(catIndex, webIndex);
+              };
+
+              websiteActions.appendChild(editBtn);
+              websiteActions.appendChild(deleteBtn);
+              websiteItem.appendChild(websiteActions);
+            }
+
+            websitesList.appendChild(websiteItem);
+          });
+        }
+
+        categoryCard.appendChild(websitesList);
+        container.appendChild(categoryCard);
+      });
     }
 
     // Initialize the app
