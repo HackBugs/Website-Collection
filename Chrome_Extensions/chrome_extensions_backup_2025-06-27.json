@@ -1,0 +1,569 @@
+[
+  {
+    "name": "Save All Resources",
+    "id": "abpdnfjocnmdomablahdcfnoggeeiedb",
+    "enabled": true,
+    "version": "2.0.6",
+    "storeLink": "https://chrome.google.com/webstore/detail/abpdnfjocnmdomablahdcfnoggeeiedb"
+  },
+  {
+    "name": "CRX Extractor/Downloader",
+    "id": "ajkhmmldknmfjnmeedkbkkojgobmljda",
+    "enabled": true,
+    "version": "1.5.9",
+    "storeLink": "https://chrome.google.com/webstore/detail/ajkhmmldknmfjnmeedkbkkojgobmljda"
+  },
+  {
+    "name": "uBlock Origin",
+    "id": "cjpalhdlnbpafiamejdnhcphjbkeiagm",
+    "enabled": true,
+    "version": "1.64.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/cjpalhdlnbpafiamejdnhcphjbkeiagm"
+  },
+  {
+    "name": "Google Docs Offline",
+    "id": "ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+    "enabled": true,
+    "version": "1.92.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/ghbmnnjooekpmoecnnnilnnbdlolhkhi"
+  },
+  {
+    "name": "Chrome Extension Manager",
+    "id": "kdogpofhmkghjffkjkllmakcojnknpbd",
+    "enabled": true,
+    "version": "1.7.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/kdogpofhmkghjffkjkllmakcojnknpbd"
+  },
+  {
+    "name": "Auto Refresh",
+    "id": "kkanleannibdajfjnemhabbdhciboggj",
+    "enabled": true,
+    "version": "1.0.6",
+    "storeLink": "https://chrome.google.com/webstore/detail/kkanleannibdajfjnemhabbdhciboggj"
+  },
+  {
+    "name": "Google Dictionary (by Google)",
+    "id": "mgijmajocgfcbeboacabfgobmjgjcoja",
+    "enabled": true,
+    "version": "4.2.4",
+    "storeLink": "https://chrome.google.com/webstore/detail/mgijmajocgfcbeboacabfgobmjgjcoja"
+  },
+  {
+    "name": "IDM Integration Module",
+    "id": "ngpampappnmepgilojfohadhhmbhlaek",
+    "enabled": true,
+    "version": "6.42.32",
+    "storeLink": "https://chrome.google.com/webstore/detail/ngpampappnmepgilojfohadhhmbhlaek"
+  },
+  {
+    "name": "Glimpse – Google Trends Supercharged",
+    "id": "ocmojhiloccgbpjnkeiooioedaklapap",
+    "enabled": true,
+    "version": "0.206.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/ocmojhiloccgbpjnkeiooioedaklapap"
+  },
+  {
+    "name": "Google Translate",
+    "id": "aapbdbdomjkkjkaonfhkkikfgjllcleb",
+    "enabled": false,
+    "version": "2.0.16",
+    "storeLink": "https://chrome.google.com/webstore/detail/aapbdbdomjkkjkaonfhkkikfgjllcleb"
+  },
+  {
+    "name": "Simple Allow Copy",
+    "id": "aefehdhdciieocakfobpaaolhipkcpgc",
+    "enabled": false,
+    "version": "0.8.8",
+    "storeLink": "https://chrome.google.com/webstore/detail/aefehdhdciieocakfobpaaolhipkcpgc"
+  },
+  {
+    "name": "Apollo.io: Free B2B Phone Number & Email Finder",
+    "id": "alhgpfoeiimagjlnfekdhkjlkiomcapa",
+    "enabled": false,
+    "version": "10.0.3",
+    "storeLink": "https://chrome.google.com/webstore/detail/alhgpfoeiimagjlnfekdhkjlkiomcapa"
+  },
+  {
+    "name": "eRail.in",
+    "id": "aopfgjfeiimeioiajeknfidlljpoebgc",
+    "enabled": false,
+    "version": "9.10",
+    "storeLink": "https://chrome.google.com/webstore/detail/aopfgjfeiimeioiajeknfidlljpoebgc"
+  },
+  {
+    "name": "Jungle Scout",
+    "id": "bckjlihkmgolmgkchbpiponapgjenaoa",
+    "enabled": false,
+    "version": "8.9.3",
+    "storeLink": "https://chrome.google.com/webstore/detail/bckjlihkmgolmgkchbpiponapgjenaoa"
+  },
+  {
+    "name": "Web Developer",
+    "id": "bfbameneiokkgbdmiekhjnmfkcnldhhm",
+    "enabled": false,
+    "version": "3.0.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+  },
+  {
+    "name": "Edge Translate",
+    "id": "bfdogplmndidlpjfhoijckpakkdjkkil",
+    "enabled": false,
+    "version": "2.4.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/bfdogplmndidlpjfhoijckpakkdjkkil"
+  },
+  {
+    "name": "Pop up blocker for Chrome™ - Poper Blocker",
+    "id": "bkkbcggnhapdmkeljlodobbkopceiche",
+    "enabled": false,
+    "version": "7.4.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/bkkbcggnhapdmkeljlodobbkopceiche"
+  },
+  {
+    "name": "OneTab",
+    "id": "chphlpgkkbolifaimnlloiipkdnihall",
+    "enabled": false,
+    "version": "1.86",
+    "storeLink": "https://chrome.google.com/webstore/detail/chphlpgkkbolifaimnlloiipkdnihall"
+  },
+  {
+    "name": "LeadRocks for LinkedIn: Profiles Scanner",
+    "id": "clhmnbpdboilpogpmojknkopklkfggpa",
+    "enabled": false,
+    "version": "0.5.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/clhmnbpdboilpogpmojknkopklkfggpa"
+  },
+  {
+    "name": "Grammarly: AI Writing and Grammar Checker App",
+    "id": "cnlefmmeadmemmdciolhbnfeacpdfbkd",
+    "enabled": false,
+    "version": "14.1109.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/cnlefmmeadmemmdciolhbnfeacpdfbkd"
+  },
+  {
+    "name": "BuiltWith Technology Profiler",
+    "id": "dapjbgnjinbpoindlpdmhochffioedbn",
+    "enabled": false,
+    "version": "3.6",
+    "storeLink": "https://chrome.google.com/webstore/detail/dapjbgnjinbpoindlpdmhochffioedbn"
+  },
+  {
+    "name": "Tampermonkey",
+    "id": "dhdgffkkebhmkfjojejmpbldmpobfkfo",
+    "enabled": false,
+    "version": "5.3.3",
+    "storeLink": "https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+  },
+  {
+    "name": "Search Highlighter",
+    "id": "ebpfppbcmjombpnmbobjabipanndeijg",
+    "enabled": false,
+    "version": "0.1.5",
+    "storeLink": "https://chrome.google.com/webstore/detail/ebpfppbcmjombpnmbobjabipanndeijg"
+  },
+  {
+    "name": "Temp Business Email Address",
+    "id": "ednjmeomfcmonkgaogcgmfeelgegkpma",
+    "enabled": false,
+    "version": "1.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/ednjmeomfcmonkgaogcgmfeelgegkpma"
+  },
+  {
+    "name": "Email Finder by Snov.io",
+    "id": "einnffiilpmgldkapbikhkeicohlaapj",
+    "enabled": false,
+    "version": "2.3.22",
+    "storeLink": "https://chrome.google.com/webstore/detail/einnffiilpmgldkapbikhkeicohlaapj"
+  },
+  {
+    "name": "Video Downloader Professional",
+    "id": "elicpjhcidhpjomhibiffojpinpmmpil",
+    "enabled": false,
+    "version": "2.1.6",
+    "storeLink": "https://chrome.google.com/webstore/detail/elicpjhcidhpjomhibiffojpinpmmpil"
+  },
+  {
+    "name": "Smuuvr",
+    "id": "emfncmdgioneiofbidgfafcekldnfbld",
+    "enabled": false,
+    "version": "1.17.7",
+    "storeLink": "https://chrome.google.com/webstore/detail/emfncmdgioneiofbidgfafcekldnfbld"
+  },
+  {
+    "name": "Save to Google Drive",
+    "id": "epniebpfenjojmafimadmknblcldlkof",
+    "enabled": false,
+    "version": "4.1.4",
+    "storeLink": "https://chrome.google.com/webstore/detail/epniebpfenjojmafimadmknblcldlkof"
+  },
+  {
+    "name": "ChatGPT for Amazon with GPT4 Shulex Copilot",
+    "id": "fchbhcjlkcdchcaklpkdofllfoimelgb",
+    "enabled": false,
+    "version": "1.9.2",
+    "storeLink": "https://chrome.google.com/webstore/detail/fchbhcjlkcdchcaklpkdofllfoimelgb"
+  },
+  {
+    "name": "GoFullPage - Full Page Screen Capture",
+    "id": "fdpohaocaechififmbbbbbknoalclacl",
+    "enabled": false,
+    "version": "8.5",
+    "storeLink": "https://chrome.google.com/webstore/detail/fdpohaocaechififmbbbbbknoalclacl"
+  },
+  {
+    "name": "Notepad",
+    "id": "ffbhefmlcoihbjcmibbfkocmnaiacinp",
+    "enabled": false,
+    "version": "7.0.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/ffbhefmlcoihbjcmibbfkocmnaiacinp"
+  },
+  {
+    "name": "Website cloner - webpage downloader",
+    "id": "ffjnfifmelbmglnajefiipdeejghkkjg",
+    "enabled": false,
+    "version": "1.1.3.32",
+    "storeLink": "https://chrome.google.com/webstore/detail/ffjnfifmelbmglnajefiipdeejghkkjg"
+  },
+  {
+    "name": "Indian Railways @etrain.info",
+    "id": "fjjlkgnbokonfaiffccmofmfopdlfmmf",
+    "enabled": false,
+    "version": "3.1.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/fjjlkgnbokonfaiffccmofmfopdlfmmf"
+  },
+  {
+    "name": "[DISCONTINUED / NO LONGER SUPPORTED] FullEnrich — Phone & Email Finder",
+    "id": "fklpnmgmbmbbclnkhamepifgoejghfhf",
+    "enabled": false,
+    "version": "1.2.7",
+    "storeLink": "https://chrome.google.com/webstore/detail/fklpnmgmbmbbclnkhamepifgoejghfhf"
+  },
+  {
+    "name": "Chromegle - Omegle IP & Client",
+    "id": "gcbbaikjfjmidabapdnebofcmconhdbn",
+    "enabled": false,
+    "version": "4.6.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/gcbbaikjfjmidabapdnebofcmconhdbn"
+  },
+  {
+    "name": "Google Search 100 Results",
+    "id": "gdcdklbikolacdinbbdakpkkapianaee",
+    "enabled": false,
+    "version": "1.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/gdcdklbikolacdinbbdakpkkapianaee"
+  },
+  {
+    "name": "Skrapp.io - Email Finder",
+    "id": "geplbbbmdpmdodfmohpikfacgkfpkhec",
+    "enabled": false,
+    "version": "1.2.13",
+    "storeLink": "https://chrome.google.com/webstore/detail/geplbbbmdpmdodfmohpikfacgkfpkhec"
+  },
+  {
+    "name": "Maps Scraper & Leads Extractor - MapsLeads.net",
+    "id": "ghokiciomljbacchbkfhmnlmflbponlf",
+    "enabled": false,
+    "version": "12.5.10",
+    "storeLink": "https://chrome.google.com/webstore/detail/ghokiciomljbacchbkfhmnlmflbponlf"
+  },
+  {
+    "name": "Material You NewTab",
+    "id": "glloabhodjfmeoccmdngmhkpmdlakfbn",
+    "enabled": false,
+    "version": "3.1.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/glloabhodjfmeoccmdngmhkpmdlakfbn"
+  },
+  {
+    "name": "Wappalyzer - Technology profiler",
+    "id": "gppongmhjkpfnbhagpmjfkannfbllamg",
+    "enabled": false,
+    "version": "6.10.83",
+    "storeLink": "https://chrome.google.com/webstore/detail/gppongmhjkpfnbhagpmjfkannfbllamg"
+  },
+  {
+    "name": "Scanlist: Email Finder & Sales Copy Generator",
+    "id": "haiofogejpjmphinemcanjidbaibkebc",
+    "enabled": false,
+    "version": "0.0.17",
+    "storeLink": "https://chrome.google.com/webstore/detail/haiofogejpjmphinemcanjidbaibkebc"
+  },
+  {
+    "name": "XPath Helper",
+    "id": "hgimnogjllphhhkhlmebbmlgjoejdpjl",
+    "enabled": false,
+    "version": "2.0.2",
+    "storeLink": "https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl"
+  },
+  {
+    "name": "Hunter - Email Finder Extension",
+    "id": "hgmhmanijnjhaffoampdlllchpolkdnj",
+    "enabled": false,
+    "version": "3.1.4",
+    "storeLink": "https://chrome.google.com/webstore/detail/hgmhmanijnjhaffoampdlllchpolkdnj"
+  },
+  {
+    "name": "Ahrefs SEO Toolbar: On-Page and SERP Tools",
+    "id": "hgmoccdbjhknikckedaaebbpdeebhiei",
+    "enabled": false,
+    "version": "3.1.74",
+    "storeLink": "https://chrome.google.com/webstore/detail/hgmoccdbjhknikckedaaebbpdeebhiei"
+  },
+  {
+    "name": "Tamper Chrome (extension)",
+    "id": "hifhgpdkfodlpnlmlnmhchnkepplebkb",
+    "enabled": false,
+    "version": "1.3.3.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/hifhgpdkfodlpnlmlnmhchnkepplebkb"
+  },
+  {
+    "name": "Sketchpad for Browser",
+    "id": "hkhoblmaekmiepdapgifgcahckeihbkb",
+    "enabled": false,
+    "version": "3.0.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/hkhoblmaekmiepdapgifgcahckeihbkb"
+  },
+  {
+    "name": "Growman: IG Email Extractor",
+    "id": "hndnabgpcmhdmaejoapophbidipmgnpb",
+    "enabled": false,
+    "version": "2.3.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/hndnabgpcmhdmaejoapophbidipmgnpb"
+  },
+  {
+    "name": "OneTab",
+    "id": "hoimpamkkoehapgenciaoajfkfkpgfop",
+    "enabled": false,
+    "version": "1.86",
+    "storeLink": "https://chrome.google.com/webstore/detail/hoimpamkkoehapgenciaoajfkfkpgfop"
+  },
+  {
+    "name": "ChromeLens",
+    "id": "idikgljglpfilbhaboonnpnnincjhjkd",
+    "enabled": false,
+    "version": "0.0.10",
+    "storeLink": "https://chrome.google.com/webstore/detail/idikgljglpfilbhaboonnpnnincjhjkd"
+  },
+  {
+    "name": "Magical: AI Agent for Autofill Automation",
+    "id": "iibninhmiggehlcdolcilmhacighjamp",
+    "enabled": false,
+    "version": "3.112.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/iibninhmiggehlcdolcilmhacighjamp"
+  },
+  {
+    "name": "QuillBot: AI Writing and Grammar Checker Tool",
+    "id": "iidnbdjijdkbmajdffnidomddglmieko",
+    "enabled": false,
+    "version": "4.24.2",
+    "storeLink": "https://chrome.google.com/webstore/detail/iidnbdjijdkbmajdffnidomddglmieko"
+  },
+  {
+    "name": "WordWeb Dictionary Lookup",
+    "id": "ilikenhndcpmliapkmmhoimckaokmihm",
+    "enabled": false,
+    "version": "0.0.1.6",
+    "storeLink": "https://chrome.google.com/webstore/detail/ilikenhndcpmliapkmmhoimckaokmihm"
+  },
+  {
+    "name": "OneLogin for Google Chrome",
+    "id": "ioalpmibngobedobkmbhgmadaphocjdn",
+    "enabled": false,
+    "version": "4.0.8",
+    "storeLink": "https://chrome.google.com/webstore/detail/ioalpmibngobedobkmbhgmadaphocjdn"
+  },
+  {
+    "name": "Stream Recorder - HLS & m3u8 Video Downloader",
+    "id": "iogidnfllpdhagebkblkgbfijkbkjdmm",
+    "enabled": false,
+    "version": "2.2.2",
+    "storeLink": "https://chrome.google.com/webstore/detail/iogidnfllpdhagebkblkgbfijkbkjdmm"
+  },
+  {
+    "name": "Email Extractor",
+    "id": "jdianbbpnakhcmfkcckaboohfgnngfcc",
+    "enabled": false,
+    "version": "5.0.4",
+    "storeLink": "https://chrome.google.com/webstore/detail/jdianbbpnakhcmfkcckaboohfgnngfcc"
+  },
+  {
+    "name": "Email Finder by ContactOut – Email Lookup Tool",
+    "id": "jjdemeiffadmmjhkbbpglgnlgeafomjo",
+    "enabled": false,
+    "version": "5.16.5",
+    "storeLink": "https://chrome.google.com/webstore/detail/jjdemeiffadmmjhkbbpglgnlgeafomjo"
+  },
+  {
+    "name": "AI Prompt Genius",
+    "id": "jjdnakkfjnnbbckhifcfchagnpofjffo",
+    "enabled": false,
+    "version": "4.2.5",
+    "storeLink": "https://chrome.google.com/webstore/detail/jjdnakkfjnnbbckhifcfchagnpofjffo"
+  },
+  {
+    "name": "Salesforce",
+    "id": "jjghhkepijgakdammjldcbnjehfkfmha",
+    "enabled": false,
+    "version": "2.256.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/jjghhkepijgakdammjldcbnjehfkfmha"
+  },
+  {
+    "name": "Video Downloader Chrome",
+    "id": "jlbmenngnppkommpmohppjpkglicldbd",
+    "enabled": false,
+    "version": "1.0.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/jlbmenngnppkommpmohppjpkglicldbd"
+  },
+  {
+    "name": "Web Scraper - Free Web Scraping",
+    "id": "jnhgnonknehpejjnehehllkliplmbmhn",
+    "enabled": false,
+    "version": "1.96.16",
+    "storeLink": "https://chrome.google.com/webstore/detail/jnhgnonknehpejjnehehllkliplmbmhn"
+  },
+  {
+    "name": "Viewstats - YouTube video & channel analytics",
+    "id": "licaccaeplhkahfkoighjblahbnafadl",
+    "enabled": false,
+    "version": "1.3.6",
+    "storeLink": "https://chrome.google.com/webstore/detail/licaccaeplhkahfkoighjblahbnafadl"
+  },
+  {
+    "name": "Speechify — Text to Speech",
+    "id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+    "enabled": false,
+    "version": "11.43.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/ljflmlehinmoeknoonhibbjpldiijjmm"
+  },
+  {
+    "name": "Reader Mode",
+    "id": "llimhhconnjiflfimocjggfjdlmlhblm",
+    "enabled": false,
+    "version": "2.0.8",
+    "storeLink": "https://chrome.google.com/webstore/detail/llimhhconnjiflfimocjggfjdlmlhblm"
+  },
+  {
+    "name": "Video DownloadHelper",
+    "id": "lmjnegcaeklhafolokijcfjliaokphfk",
+    "enabled": false,
+    "version": "9.5.0.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/lmjnegcaeklhafolokijcfjliaokphfk"
+  },
+  {
+    "name": "Prospeo - Email Finder",
+    "id": "lodchmjigmbiibplfmagekadbpomglad",
+    "enabled": false,
+    "version": "1.6.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/lodchmjigmbiibplfmagekadbpomglad"
+  },
+  {
+    "name": "WebChatGPT: ChatGPT with internet access",
+    "id": "lpfemeioodjbpieminkklglpmhlngfcn",
+    "enabled": false,
+    "version": "4.1.61",
+    "storeLink": "https://chrome.google.com/webstore/detail/lpfemeioodjbpieminkklglpmhlngfcn"
+  },
+  {
+    "name": "Take Webpage Screenshots Entirely - FireShot",
+    "id": "mcbpblocgmgfnpjjppndjkmgjaogfceg",
+    "enabled": false,
+    "version": "2.1.1.7",
+    "storeLink": "https://chrome.google.com/webstore/detail/mcbpblocgmgfnpjjppndjkmgjaogfceg"
+  },
+  {
+    "name": "BLACKBOX.AI",
+    "id": "mcgbeeipkmelnpldkobichboakdfaeon",
+    "enabled": false,
+    "version": "3.1.92",
+    "storeLink": "https://chrome.google.com/webstore/detail/mcgbeeipkmelnpldkobichboakdfaeon"
+  },
+  {
+    "name": "Google Input Tools",
+    "id": "mclkkofklkfljcocdinagocijmpgbhab",
+    "enabled": false,
+    "version": "11.2.0.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/mclkkofklkfljcocdinagocijmpgbhab"
+  },
+  {
+    "name": "Copy for Chat GPT",
+    "id": "mloblghgjiagjdffmgobhbgmplhongpm",
+    "enabled": false,
+    "version": "0.3.11",
+    "storeLink": "https://chrome.google.com/webstore/detail/mloblghgjiagjdffmgobhbgmplhongpm"
+  },
+  {
+    "name": "Displate Fullscreen Viewer",
+    "id": "nchdoajnpindhpopdjhlapbdanbbfneo",
+    "enabled": false,
+    "version": "1.3",
+    "storeLink": "https://chrome.google.com/webstore/detail/nchdoajnpindhpopdjhlapbdanbbfneo"
+  },
+  {
+    "name": "Keepa - Amazon Price Tracker",
+    "id": "neebplgakaahbhdphmkckjjcegoiijjo",
+    "enabled": false,
+    "version": "5.51",
+    "storeLink": "https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo"
+  },
+  {
+    "name": "Instant Data Scraper",
+    "id": "ofaokhiedipichpaobibbnahnkdoiiah",
+    "enabled": false,
+    "version": "1.2.1",
+    "storeLink": "https://chrome.google.com/webstore/detail/ofaokhiedipichpaobibbnahnkdoiiah"
+  },
+  {
+    "name": "hide.me Proxy",
+    "id": "ohjocgmpmlfahafbipehkhbaacoemojp",
+    "enabled": false,
+    "version": "1.3.0",
+    "storeLink": "https://chrome.google.com/webstore/detail/ohjocgmpmlfahafbipehkhbaacoemojp"
+  },
+  {
+    "name": "RocketReach Chrome Extension",
+    "id": "oiecklaabeielolbliiddlbokpfnmhba",
+    "enabled": false,
+    "version": "3.0.64",
+    "storeLink": "https://chrome.google.com/webstore/detail/oiecklaabeielolbliiddlbokpfnmhba"
+  },
+  {
+    "name": "AIPRM for ChatGPT",
+    "id": "ojnbohmppadfgpejeebfnmnknjdlckgj",
+    "enabled": false,
+    "version": "1.3.4.17",
+    "storeLink": "https://chrome.google.com/webstore/detail/ojnbohmppadfgpejeebfnmnknjdlckgj"
+  },
+  {
+    "name": "Price History & Tracker, Spend Lens: Buyhatke",
+    "id": "ojplmecpdpgccookcobabopnaifgidhf",
+    "enabled": false,
+    "version": "5.1.82",
+    "storeLink": "https://chrome.google.com/webstore/detail/ojplmecpdpgccookcobabopnaifgidhf"
+  },
+  {
+    "name": "Transkriptor Transcribe Audio to Text",
+    "id": "pbajmiiebklfjhkeahpgjdlgclelihjh",
+    "enabled": false,
+    "version": "3.0.2",
+    "storeLink": "https://chrome.google.com/webstore/detail/pbajmiiebklfjhkeahpgjdlgclelihjh"
+  },
+  {
+    "name": "Salesforce Lightning Inspector",
+    "id": "pcpmcffcomlcjgpcheokdfcjipanjdpc",
+    "enabled": false,
+    "version": "1.0.11",
+    "storeLink": "https://chrome.google.com/webstore/detail/pcpmcffcomlcjgpcheokdfcjipanjdpc"
+  },
+  {
+    "name": "LingQ Importer",
+    "id": "pdomdmifpbdkkmiepgebeabbbgkdbdof",
+    "enabled": false,
+    "version": "2.3.17",
+    "storeLink": "https://chrome.google.com/webstore/detail/pdomdmifpbdkkmiepgebeabbbgkdbdof"
+  },
+  {
+    "name": "Wiza - Phone Number & Email Finder",
+    "id": "pjmlkdacmaejhkdcflncbpcpidkggoio",
+    "enabled": false,
+    "version": "0.3.22",
+    "storeLink": "https://chrome.google.com/webstore/detail/pjmlkdacmaejhkdcflncbpcpidkggoio"
+  }
+]
